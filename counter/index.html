@@ -18,7 +18,7 @@
       </div>
       <button>Reset</button>
     </header>
-    <main @click="count++">
+    <main @click="count++" :style="`--counter: ${count}%`">
       <label id="counter">{{ count }}</label>
     </main>
   </div>
