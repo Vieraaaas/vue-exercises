@@ -1,7 +1,7 @@
 Vue.createApp({
   data() {
     return {
-      activeLetter: "A",
+      activeLetter: "",
     };
   },
 }).mount("#app");
