@@ -16,7 +16,7 @@
         <h1>Counter</h1>
         <small>(click the white area)</small>
       </div>
-      <button>Reset</button>
+      <button @click="count = 0">Reset</button>
     </header>
     <main @click="count++" :style="`--counter: ${count}%`">
       <label id="counter">{{ count }}</label>
