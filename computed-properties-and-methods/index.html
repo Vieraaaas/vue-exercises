@@ -28,10 +28,11 @@
             <th v-for="columnName in columnNames" :key="columnName">
               {{ columnName }}
             </th>
+
           </tr>
         </thead>
         <tbody>
-          <tr v-for="{ title, isbn, author, publisher, price, numPages } of books" :key="isbn">
+          <tr v-for="{ title, isbn, author, publisher, price, numPages } of checkOreilly" :key="isbn">
             <td>{{ title }}</td>
             <td>{{ isbn }}</td>
             <td>{{ author }}</td>

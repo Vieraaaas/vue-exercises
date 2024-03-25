@@ -560,5 +560,10 @@ Vue.createApp({
       ];
       return names;
     },
+    checkOreilly() {
+      return this.books.filter((book) => {
+        return book.publisher === "O'Reilly Media";
+      });
+    },
   },
 }).mount("#app");
