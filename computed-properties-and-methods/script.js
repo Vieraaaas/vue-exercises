@@ -566,4 +566,13 @@ Vue.createApp({
       });
     },
   },
+
+  methods: {
+    newPrice(price) {
+      // split the price into "$" (assigned to the variable before the comma i.e. to nothing)
+      // and the numerical value(assigned to priceValue),
+      const [, priceValue] = price.split("$");
+      return "$" + (priceValue * 0.8).toFixed(2);
+    },
+  },
 }).mount("#app");
