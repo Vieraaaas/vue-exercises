@@ -30,13 +30,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>High Performance Mobile Web</td>
-            <td>9781491912553</td>
-            <td>Maximiliano Firtman</td>
-            <td>O'Reilly Media</td>
-            <td>$7.00</td>
-            <td>326</td>
+          <tr v-for="book in books" :key="book">{{book}}
+            <td v-for="info in book" :key="info">{{info}} </td>
           </tr>
         </tbody>
       </table>
