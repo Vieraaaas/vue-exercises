@@ -25,12 +25,8 @@
       <table>
         <thead>
           <tr>
-            <th>title</th>
-            <th>isbn</th>
-            <th>author</th>
-            <th>publisher</th>
-            <th>price</th>
-            <th>numPages</th>
+            <th v-for="key in Object.keys(books[0])" :key="key">{{key}}</th>
+
           </tr>
         </thead>
         <tbody>
