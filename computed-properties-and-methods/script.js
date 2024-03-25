@@ -547,4 +547,18 @@ Vue.createApp({
       ],
     };
   },
+
+  computed: {
+    columnNames() {
+      const names = [
+        "title",
+        "isbn",
+        "author",
+        "publisher",
+        "price",
+        "numPages",
+      ];
+      return names;
+    },
+  },
 }).mount("#app");
