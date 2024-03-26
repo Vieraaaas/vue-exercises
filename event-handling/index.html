@@ -24,7 +24,7 @@
       <h1>Task 1</h1>
       <div @mousemove="x = $event.offsetX, y = $event.offsetY" id="area">
         <span>x: {{ x }}, y: {{ y }}</span>
-        <div class="dead-spot">DEAD SPOT</div>
+        <div @mousemove.stop class="dead-spot">DEAD SPOT</div>
       </div>
       <h1>Task 2</h1>
       <ul class="fruit-basket">
