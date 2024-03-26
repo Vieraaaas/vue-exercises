@@ -12,7 +12,10 @@
 </head>
 
 <body class="content">
-  <button class="btn btn-on">Press Me</button>
+  <div id="app">
+    <button @click="toggleLight" :class="lightOut ? 'btn-off' : ''" class="btn btn-on">Press Me</button>
+  </div>
+  <script src="https://unpkg.com/vue@latest"></script>
   <script src="script.js"></script>
 </body>
 
