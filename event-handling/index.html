@@ -22,7 +22,7 @@
   <main>
     <div id="app" class="inside">
       <h1>Task 1</h1>
-      <div id="area">
+      <div @mousemove="x = $event.offsetX, y = $event.offsetY" id="area">
         <span>x: {{ x }}, y: {{ y }}</span>
         <div class="dead-spot">DEAD SPOT</div>
       </div>
