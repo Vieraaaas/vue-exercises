@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <main>
+  <main id="app">
     <h1><span class="cyber-font">Cyber </span>Post-It</h1>
     <form>
       <section class="options">
@@ -38,11 +38,15 @@
     </form>
 
     <ul data-cy="list">
-
+      <!--v-cloak prevents the mustache tags from being displayed. It is defined in style.css-->
+      <li v-cloak v-for="task of tasks">
+        <input type="checkbox">
+        {{task.description}}
+      </li>
     </ul>
   </main>
 
-
+  <script src="https://unpkg.com/vue@latest"></script>
   <script src="script.js"></script>
 </body>
 

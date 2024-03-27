@@ -163,3 +163,7 @@ li input:checked:after {
   scale: 1.5;
   color: var(--black);
 }
+
+[v-cloak] {
+  display: none;
+}
