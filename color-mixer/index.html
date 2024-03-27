@@ -10,18 +10,21 @@
 </head>
 
 <body>
-  <header>
-    <form>
-      <input type="range" name="red" id="red" step="1" min="0" max="255" value="255">
-      <input type="range" name="green" id="green" step="1" min="0" max="255" value="165">
-      <input type="range" name="blue" id="blue" step="1" min="0" max="255" value="0">
-      <button>Random Color</button>
-    </form>
-    <p id="rgb">RGB (255, 165, 0)</p>
-  </header>
-  <main></main>
-
+  <div id="app">
+    <header :style="colorTransparent">
+      <form>
+        <input v-model="valueRed" type="range" name="red" id="red" step="1" min="0" max="255" value="255">
+        <input v-model="valueGreen" type="range" name="green" id="green" step="1" min="0" max="255" value="165">
+        <input v-model="valueBlue" type="range" name="blue" id="blue" step="1" min="0" max="255" value="0">
+        <button @click.prevent="changeRandom">Random Color</button>
+      </form>
+      <p id="rgb">RGB ({{valueRed}}, {{valueGreen}}, {{valueBlue}})</p>
+    </header>
+    <main :style="color"></main>
+  </div>
+  <script src="https://unpkg.com/vue@latest"></script>
   <script src="script.js"></script>
+
 </body>
 
 </html>
